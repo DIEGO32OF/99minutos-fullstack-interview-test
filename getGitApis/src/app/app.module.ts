@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { BranchesComponent } from './branches/branches.component';
 import { RouterModule} from '@angular/router';
 import {routing,appRoutingProviders} from './app.routing';
-import { CommitBranchComponent } from './commit-branch/commit-branch.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BranchesComponent,
-    CommitBranchComponent
+    BranchesComponent
+    
   ],
   imports: [
     BrowserModule,

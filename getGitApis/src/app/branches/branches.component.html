@@ -40,18 +40,19 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Listado de commits por branch</h4>
+        <h4 class="modal-title">Commits por branch</h4>
       </div>
       <div class="modal-body">
+        <div *ngIf="branchCommitList">
         <ul >
-          <ng-container *ngFor="let branchCommit of branchCommitList">
+          <!-- <ng-container *ngFor="let branchCommit of branchCommitList"> -->
             <li  style="cursor: pointer; " >
-             Autor: <b>{{branchCommit.commit.author.name}}</b> &nbsp;&nbsp;&nbsp; {{branchCommit.commit.author.date}}<br>
-             Mensaje: <b>{{branchCommit.commit.message}}</b>
+             Autor: <b>{{branchCommitList.commit.author.name}}</b> &nbsp;&nbsp;&nbsp; {{branchCommitList.commit.author.date}}<br>
+             Mensaje: <b>{{branchCommitList.commit.message}}</b>
             </li>
-          </ng-container>
+          <!-- </ng-container> -->
         </ul>
-        
+      </div>
       </div>
     </div>
     <!-- /.modal-content -->
