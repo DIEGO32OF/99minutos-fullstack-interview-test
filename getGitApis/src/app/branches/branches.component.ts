@@ -18,8 +18,7 @@ export class BranchesComponent implements OnInit {
    
    }
 
-  ngOnInit() {
-    //
+  ngOnInit() {    
      this._getApis.getBranchList().subscribe(
       (listBranches:any) => {
         this.branchList = listBranches;        
@@ -28,8 +27,7 @@ export class BranchesComponent implements OnInit {
 
   }
 
-  openCommits(urlCommit){
-    console.log(urlCommit, typeof(urlCommit))
+  openCommits(urlCommit){    
     this._getApis.getCommitsFromBranch(urlCommit).subscribe(
       (listCommitBranch: any) =>{
         console.log(listCommitBranch)
